@@ -1,13 +1,13 @@
-import rosypy
+import rospy
 from std_msgs.msg import String
 
 def stringListenerCallback(data):
     rospy.loginfo(' The content of topic: %s',data.data)
 
-def string.ListenerCallback(data):
-    rospy.init_node('node-2', anonumous = False)
+def stringListener():
+    rospy.init_node('node_2', anonymous = False)
 
-    rospy.Subscrobe('mohit', String, stringListenerCallback)
+    rospy.Subscriber('mohit', String, stringListenerCallback)
 
     rospy.spin()
 

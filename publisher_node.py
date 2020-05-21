@@ -1,9 +1,9 @@
 import rospy
-from std_msgs.msg import Strings
+from std_msgs.msg import String
 
 def simplePublisher():
     simple_publisher = rospy.Publisher('mohit', String, queue_size =10)
-    rospy.init_node('node-1', anonymous = False)
+    rospy.init_node('node_1', anonymous = False)
     rate = rospy.Rate(10)
 
     mohit_content = "my first ros topic"
@@ -11,7 +11,7 @@ def simplePublisher():
 	simple_publisher.publish(mohit_content)
 	rate.sleep()
 
-if __namae__== '__main__':
+if __name__== '__main__':
     try:
 	simplePublisher()
     except rospy.ROSInterruptException:
